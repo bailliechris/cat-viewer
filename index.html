@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Cat Place</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <h1>The Cat Place</h1>
+            <nav>
+                <form>
+                    <div>
+                        <label for="category">Choose a category:</label>
+                        <select id="select_category">
+                            <option selected>sunglasses</option>
+                        </select>
+                    </div>
+                </form> 
+            </nav>
+        </header>
+        <h3 id="loading_placeholder">Images of cats go here... when loaded</h3>
+        <main id="preview_area" class="image_container">
+            
+        </main>
+
+        <!-- The Modal -->
+        <div id="big_image_modal" class="modal">
+            <!-- Modal content -->
+            <div id="modal_content" class="modal_content">
+                <div>
+                    <span id="modal_close" class="modal_close">&times;</span>
+                </div>
+                
+            </div>
+        </div>
+
+        <footer>
+            <div>
+                <form>
+                    <input type="button" id="add_more_button" value="Need more?"></input>
+                </form>
+            </div>
+        </footer>
+    </body>
+    <script src="catImage.js"></script>
+    <script src="catAPI.js"></script>
+    <script src="start.js"></script>
+</html>
