@@ -1,9 +1,16 @@
+// Cat Image Class - catImage
+// Methods:
+// createImage -    creates a new div, img and p tag with listeners to trigger the modal
+//                  and appends it to the preview_area div.
+// removeImage -    removes this image from the dom.
+
 class catImage {
     constructor(url, id, width, category){
         this.url = url;
         this.id = id;
         this.width = width;
         this.category = category;
+        // Call create image as soon as object is created
         this.createImage();
     }
 

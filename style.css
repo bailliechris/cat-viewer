@@ -6,11 +6,57 @@ h1, h3, p, form {
     text-align: center;
 }
 
-#loading_placeholder {
-    display:block;
-    color:#888;
+/*Select Box Formatting */
+select{
+    font-weight: 700;
+    color: #444;
+    line-height: 1.3;
+    padding: .6em 1.4em .5em .8em;
+    width: 50%;
+    max-width: 50%; /* useful when width is set to anything other than 100% */
+    box-sizing: border-box;
+    margin: 0;
+    border: 1px solid #aaa;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,.04);
+    border-radius: .5em;
+    transition: all 0.5s;
 }
 
+select:hover{
+    border-color:#000;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+select:focus{
+    border-radius: 1em;
+    border-width: 5px;
+    border-color:#14197a;
+}
+
+/*Button Formatting */
+input[type=button]{
+    font-weight: 700;
+    color: #444;
+    line-height: 1.3;
+    padding: .6em 1.4em .5em .8em;
+    width: 50%;
+    max-width: 50%; /* useful when width is set to anything other than 100% */
+    box-sizing: border-box;
+    margin: 0;
+    border: 1px solid #aaa;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    border-radius: .5em;  
+    transition: all 0.5s;  
+}
+
+input[type=button]:hover {
+    border-color:#000;
+    background-color: #adfcff;
+    color:#14197a;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);   
+}
+
+/*Div Container for Image Cards - setting up Flexbox*/
 .image_container{
     display:flex;
     flex-wrap: wrap;
@@ -19,15 +65,23 @@ h1, h3, p, form {
     align-content:space-around;
 }
 
+/*Cat Card setup*/
 .cat_image_card {
     width:150px;
     margin: 10px;
     padding: 10px;
     justify-content: center;
-    border-radius: 5px;
-    background-color: #888;
+    border-radius: 5px;    
+    background-color: #adfcff;
+    flex-basis: content;
 }
 
+/*Cat Card text*/
+.cat_image_card > p {
+    color:#14197a;
+}
+
+/*Cat Card image preview*/
 .cat_image {
     position: relative;
     left: 25px;
@@ -41,49 +95,50 @@ h1, h3, p, form {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-
+/*Big Image (in Modal)*/
 .big_cat_image {
     border-radius: 5px;
     max-width: 85%;
 }
 
-/* The Modal (background) */
+/* The Modal fade out the screen */
 .modal {
-    display: none; /* Hidden by default */
-    border-radius: 5px;
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    display: none; 
+    border-radius: 0;
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4);
   }
   
-  /* Modal Content */
-  .modal_content {
+/* Modal Content (for big_cat_image and p)*/
+.modal_content {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
-    border: 1px solid #888;
+    border-radius: 5px;
+    border: 2px solid #888;
     width: 600px;
     height:auto;
-  }
-  
-  /* The Close Button */
-  .modal_close {
+}
+
+/* The Modal Close Button */
+.modal_close {
     color: #aaaaaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
     cursor:pointer;
-  }
+}
   
-  .close:hover,
-  .close:focus {
+.close:hover,
+.close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
-  }
+}
