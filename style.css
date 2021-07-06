@@ -1,5 +1,12 @@
+/* Dark Blue: #14197a */
+/* Light Blue: #adfcff */
+/* light grey (border): #aaa */
+/* dark grey: #444 */
+/* orange: #eae689 */
+
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background:#adfcff;
 }
 
 h1, h3, p, form {
@@ -16,6 +23,7 @@ select{
     max-width: 50%; /* useful when width is set to anything other than 100% */
     box-sizing: border-box;
     margin: 0;
+    background: azure;
     border: 1px solid #aaa;
     box-shadow: 0 5px 5px 0 rgba(0,0,0,.04);
     border-radius: .5em;
@@ -24,12 +32,14 @@ select{
 
 select:hover{
     border-color:#000;
+    background:#eae689;
+    color:#14197a;
     box-shadow: 0 5px 5px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 select:focus{
     border-radius: 1em;
-    border-width: 5px;
+    border-width: 1px;
     border-color:#14197a;
 }
 
@@ -38,6 +48,7 @@ input[type=button]{
     font-weight: 700;
     color: #444;
     line-height: 1.3;
+    background:azure;
     padding: .6em 1.4em .5em .8em;
     width: 50%;
     max-width: 50%; /* useful when width is set to anything other than 100% */
@@ -51,7 +62,7 @@ input[type=button]{
 
 input[type=button]:hover {
     border-color:#000;
-    background-color: #adfcff;
+    background: #eae689;
     color:#14197a;
     box-shadow: 0 5px 5px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);   
 }
@@ -71,14 +82,18 @@ input[type=button]:hover {
     margin: 10px;
     padding: 10px;
     justify-content: center;
-    border-radius: 5px;    
-    background-color: #adfcff;
+    border-radius: 5px;
+    border: 2px solid #444;    
+    background-color: azure;
     flex-basis: content;
+}
+.cat_image_card:hover{
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);   
 }
 
 /*Cat Card text*/
 .cat_image_card > p {
-    color:#14197a;
+    color:#444;
 }
 
 /*Cat Card image preview*/
